@@ -32,7 +32,7 @@ export default function Home() {
       <footer
         className={`${styles.footer} w-full h-50 text-white px-40 flex align-center items-center justify-center uppercase`}
         style={{
-          backgroundColor: chroma('#D4F880').darken().hex(),
+          backgroundColor: chroma('#000000').brighten(2).hex(),
         }}
       >
         Powered by passion
