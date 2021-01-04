@@ -6,7 +6,9 @@
 // uniform mat4 viewMatrix;
 // uniform vec3 cameraPosition;
 
+#ifdef GL_ES
 precision mediump float;
+#endif
 
 uniform float time;
 uniform float progress;
@@ -38,7 +40,8 @@ void main() {
     float r = sin(vUv.x - mouse.x) * 0.5 + 0.5;
     float b = sin(vUv.y + mouse.y) * 0.5 + 0.5;
     float g = sin((vUv.x + vUv.y + sin(time * 0.5)) * 0.5) * 0.5 + 0.5;
-    gl_FragColor = vec4(r, g, b, 1.0);
+    // gl_FragColor = vec4(r, g, b, 1.0);
+    gl_FragColor = vec4(abs(sin(time)), 0.0, 0.0, 1.0);
 }
 
 

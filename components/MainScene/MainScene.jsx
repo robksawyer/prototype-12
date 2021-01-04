@@ -101,6 +101,7 @@ const Scene = () => {
     mesh.current.position.z = Math.sin(clock.elapsedTime)
     group.current.rotation.y += 0.02
 
+    mesh.current.material.uniforms.time.value = clock.getElapsedTime()
     mesh.current.material.uniforms.mouse.value = new THREE.Vector2(
       mouse.x,
       mouse.y

@@ -25,7 +25,9 @@
 // attribute vec3 normal;
 // attribute vec2 uv;
 
+#ifdef GL_ES
 precision mediump float;
+#endif
 
 uniform float time; 
 uniform vec2 mouse;
