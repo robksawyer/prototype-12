@@ -135,11 +135,10 @@ const Scene = () => {
         distance={20}
       />
       <mesh ref={mesh} position={[0, 2, 0]} castShadow>
-        <icosahedronGeometry attach="geometry" args={[1, 1]} />
+        <boxBufferGeometry attach="geometry" args={[1, 1]} />
         {/* Shader Material Example */}
         <defaultShaderMaterial
           attach="material"
-          side={THREE.DoubleSide}
           // time={0}
           // texture={new THREE.TextureLoader().load(
           //   '/3d/textures/checkerboard.jpg',

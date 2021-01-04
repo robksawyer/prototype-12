@@ -25,6 +25,8 @@
 // attribute vec3 normal;
 // attribute vec2 uv;
 
+precision mediump float;
+
 uniform float time; 
 uniform vec2 mouse;
 varying vec2 vUv;

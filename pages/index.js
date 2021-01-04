@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import chroma from 'chroma-js'
 import styles from '../styles/Home.module.css'
 
 const MainScene = dynamic(() => import('../components/MainScene'), {
@@ -29,7 +30,10 @@ export default function Home() {
       </main>
 
       <footer
-        className={`${styles.footer} w-full h-50 bg-black text-white px-40 flex align-center items-center justify-center uppercase`}
+        className={`${styles.footer} w-full h-50 text-white px-40 flex align-center items-center justify-center uppercase`}
+        style={{
+          backgroundColor: chroma('#D4F880').darken().hex(),
+        }}
       >
         Powered by passion
       </footer>
